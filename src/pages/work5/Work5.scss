@@ -1,0 +1,211 @@
+// Variables
+$primary-color: #facc15;
+$secondary-color: #facc15;
+$background-color: #000;
+$white: #facc15;
+$transition-duration: 0.3s;
+$container-max-width: 1600px;
+$header-padding: 4rem;
+$grid-gap: 2rem;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin container {
+  max-width: $container-max-width;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.home-button {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  background-color: transparent;
+  color: $primary-color;
+  padding: 0.8rem 1.5rem;
+  border: 1px solid $primary-color;
+  border-radius: 2rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all $transition-duration ease;
+  z-index: 10;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba($primary-color, 0.3);
+  }
+
+  @media (max-width: 768px) {
+    top: 1rem;
+    left: 1rem;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+.portfolio-container {
+  min-height: 100vh;
+  background-color: $background-color;
+}
+
+.portfolio-header {
+  text-align: center;
+  padding: $header-padding 1rem;
+  margin-bottom: 2rem;
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: $primary-color;
+    margin-bottom: 1.5rem;
+
+    @media (min-width: 768px) {
+      font-size: 3.5rem;
+    }
+  }
+
+  .description {
+    max-width: 800px;
+    margin: 0 auto;
+
+    p {
+      color: $secondary-color;
+      font-size: 1.25rem;
+      line-height: 1.6;
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+.portfolio-main {
+  @include container;
+  padding: 2rem;
+
+  .image-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $grid-gap;
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 1400px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .image-item {
+    position: relative;
+    background-color: $background-color;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(250, 204, 21, 0.1);
+    transition: transform $transition-duration;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.03);
+
+      .play-button {
+        transform: translate(-50%, -50%) scale(1.1);
+        background-color: rgba($primary-color, 0.8);
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 600px;
+      -o-object-fit: cover;
+      object-fit: cover;
+      display: block;
+
+      @media (min-width: 768px) {
+        height: 700px;
+      }
+
+      @media (min-width: 1400px) {
+        height: 800px;
+      }
+    }
+
+    .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80px;
+      height: 80px;
+      background-color: rgba($primary-color, 0.6);
+      border-radius: 50%;
+      @include flex-center;
+      color: $background-color;
+      font-size: 2rem;
+      transition: all $transition-duration;
+    }
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  @include flex-center;
+  z-index: 1000;
+  cursor: pointer;
+
+  .modal-content {
+    position: relative;
+    width: 90vw;
+    height: 90vh;
+    background-color: $background-color;
+    border-radius: 0.5rem;
+    overflow: hidden;
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .close-button {
+      position: absolute;
+      top: -40px;
+      right: -40px;
+      background: none;
+      border: none;
+      color: $primary-color;
+      font-size: 2rem;
+      cursor: pointer;
+      padding: 10px;
+      z-index: 1001;
+
+      &:hover {
+        color: lighten($primary-color, 10%);
+      }
+    }
+  }
+}
+
+.portfolio-footer {
+  background-color: $background-color;
+  padding: 3rem 1rem;
+  text-align: center;
+  margin-top: 4rem;
+
+  p {
+    color: $primary-color;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.25rem;
+    line-height: 1.6;
+  }
+}

@@ -1,0 +1,28 @@
+.footer {
+  background-color: #1f2937;
+  color: #ffffff;
+  padding: 40px;
+
+  &__container {
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__item {
+    span {
+      font-size: 1rem;
+    }
+  }
+
+  &__copyright {
+    margin-top: 1rem;
+    color: #9ca3af;
+    font-size: 0.875rem;
+  }
+}

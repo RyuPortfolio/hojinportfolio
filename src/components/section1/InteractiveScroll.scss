@@ -1,0 +1,395 @@
+// InteractiveScroll.scss
+.section1 {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: #000;
+
+  .header-content {
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 90vh;
+    gap: 1.5vh;
+
+    .title-hojin {
+      display: flex;
+      justify-content: left;
+      z-index: 1;
+      color: #facc15;
+      font-weight: 700;
+      font-size: clamp(60px, 15vw, 280px);
+      line-height: 0.8;
+    }
+
+    .title-portfolio {
+      display: flex;
+      justify-content: right;
+      font-weight: 700;
+      color: #facc15;
+      z-index: 1;
+      font-size: clamp(60px, 15vw, 280px);
+      line-height: 0.8;
+    }
+  }
+
+  .yellow-div {
+    position: absolute;
+    width: clamp(80px, 15vw, 150px);
+    height: clamp(80px, 15vw, 150px);
+    background-color: #fff;
+    z-index: 2;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: center;
+
+    &.fixed {
+      position: fixed;
+    }
+
+    &.bottom {
+      position: absolute;
+    }
+
+    &.show-port {
+      width: 100vw;
+      height: 100vh;
+      max-width: 100vw;
+      max-height: 100vh;
+      overflow: hidden;
+      transform: none !important;
+
+      @media (max-width: 768px) {
+        height: auto;
+        overflow: scroll;
+      }
+    }
+
+    .cursor-image {
+      width: 100%;
+      height: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+      transition: all 0.3s ease;
+    }
+
+    .port {
+      height: 100%;
+      background-color: white;
+      display: flex;
+      padding: clamp(1rem, 3vw, 2rem);
+      gap: clamp(1rem, 3vw, 2rem);
+      overflow-y: auto;
+      position: relative; // 추가
+
+      &::before {
+        // 가상 요소로 배경 확장
+        content: "";
+        position: absolute;
+        top: -20vh;
+        left: 0;
+        right: 0;
+        height: 20vh;
+        background-color: white;
+      }
+      .profile-container {
+        width: 25%;
+        flex-shrink: 0;
+
+        img {
+          width: 100%;
+          max-width: 300px;
+          border-radius: 0.5rem;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease;
+
+          &:hover {
+            transform: scale(1.02);
+          }
+        }
+      }
+
+      .info-container {
+        width: 75%;
+
+        section {
+          margin-bottom: 2rem;
+
+          h2 {
+            font-size: clamp(1.25rem, 2vw, 1.5rem);
+            font-weight: 600;
+            color: #333;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+
+            &::after {
+              content: "";
+              position: absolute;
+              bottom: -2px;
+              left: 0;
+              width: 50px;
+              height: 2px;
+              background-color: #666;
+              transition: width 0.3s ease;
+            }
+
+            &:hover::after {
+              width: 100px;
+            }
+          }
+
+          ul {
+            li {
+              padding: 0.75rem 0;
+              border-bottom: 1px solid #f5f5f5;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              flex-wrap: wrap;
+              gap: 0.5rem;
+
+              &:hover {
+                background-color: #f8f8f8;
+                padding-left: 0.5rem;
+                border-radius: 0.25rem;
+              }
+
+              span {
+                font-size: clamp(0.875rem, 1.5vw, 1rem);
+
+                &:first-child {
+                  font-weight: 500;
+                  color: #333;
+                  min-width: 140px;
+                }
+
+                &:nth-child(2) {
+                  color: #666;
+                  flex: 1;
+                  min-width: 180px;
+                }
+
+                &:last-child {
+                  color: #000;
+                  text-align: right;
+                  min-width: 120px;
+                }
+              }
+            }
+          }
+
+          &.career {
+            li {
+              .career-header {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+                margin-bottom: 0.25rem;
+              }
+
+              .position {
+                color: #000;
+                font-size: clamp(0.875rem, 1.5vw, 0.95rem);
+                margin-bottom: 0.5rem;
+              }
+
+              .career-details {
+                p {
+                  color: #000;
+                  font-size: clamp(0.875rem, 1.5vw, 0.95rem);
+                  margin: 0.25rem 0;
+                  padding-left: 0.5rem;
+                }
+              }
+            }
+          }
+
+          &.education,
+          &.certification {
+            li {
+              .status {
+                color: #ef4444;
+                font-size: 0.875rem;
+                margin-left: 0.5rem;
+              }
+            }
+          }
+        }
+      }
+
+      @media (max-width: 1024px) {
+        .profile-container {
+          width: 30%;
+
+          img {
+            max-width: 250px;
+          }
+        }
+
+        .info-container {
+          width: 70%;
+        }
+      }
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+        padding: 1rem;
+
+        .profile-container {
+          width: 100%;
+          text-align: center;
+          margin-bottom: 2rem;
+
+          img {
+            width: 200px;
+            margin: 0 auto;
+          }
+        }
+
+        .info-container {
+          width: 100%;
+
+          section {
+            ul {
+              li {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1rem 0;
+
+                span {
+                  width: 100%;
+                  text-align: left;
+
+                  &:last-child {
+                    font-size: 0.85rem;
+                    color: #000;
+                  }
+                }
+              }
+            }
+
+            &.career {
+              li {
+                .career-details {
+                  p {
+                    padding-left: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      @media (max-width: 480px) {
+        padding: 0.75rem;
+
+        .profile-container img {
+          width: 150px;
+        }
+
+        section {
+          margin-bottom: 1.5rem;
+
+          h2 {
+            font-size: 1.25rem;
+          }
+        }
+      }
+
+      @media (orientation: landscape) and (max-height: 600px) {
+        flex-direction: row;
+        padding: 1rem;
+
+        .profile-container {
+          width: 20%;
+          margin-bottom: 0;
+
+          img {
+            width: 100%;
+            max-width: 150px;
+          }
+        }
+
+        .info-container {
+          width: 80%;
+
+          section {
+            margin-bottom: 1rem;
+
+            h2 {
+              font-size: 1.25rem;
+              margin-bottom: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 575px) {
+    .header-content {
+      padding: 1rem;
+
+      .title-hojin,
+      .title-portfolio {
+        font-size: clamp(40px, 12vw, 60px);
+      }
+    }
+
+    .yellow-div {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  @media (min-width: 576px) and (max-width: 767px) {
+    .header-content {
+      .title-hojin,
+      .title-portfolio {
+        font-size: clamp(50px, 14vw, 80px);
+      }
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    .header-content {
+      .title-hojin,
+      .title-portfolio {
+        font-size: clamp(70px, 16vw, 120px);
+      }
+    }
+  }
+
+  @media (orientation: landscape) and (max-height: 600px) {
+    .header-content {
+      padding: 1rem;
+      min-height: 80vh;
+
+      .title-hojin,
+      .title-portfolio {
+        font-size: clamp(40px, 10vw, 80px);
+      }
+    }
+
+    &.show-port {
+      width: 100%;
+      height: 100vh;
+      max-width: 100%;
+      overflow: hidden;
+      transform: none !important;
+
+      @media (max-width: 768px) {
+        left: 0 !important;
+        transform: none !important;
+        width: 100% !important;
+        height: 100% !important;
+      }
+    }
+  }
+}
