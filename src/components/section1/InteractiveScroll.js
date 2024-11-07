@@ -1,4 +1,3 @@
-// InteractiveScroll.jsx
 import React, { useState, useEffect, useRef } from "react";
 import "./InteractiveScroll.scss";
 import ryu from "./img/ryu.jpg";
@@ -88,6 +87,7 @@ const InteractiveScroll = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(-1);
   const yellowDivRef = useRef(null);
   const section1Ref = useRef(null);
+  const rafRef = useRef(null);
 
   const images = [img1, img2, img3, img4, img5];
   const altTexts = [
@@ -105,6 +105,37 @@ const InteractiveScroll = () => {
       }
     };
 
+    let targetPosition = { x: 0, y: 0 };
+    let currentPosition = { x: 0, y: 0 };
+    const ease = 0.15;
+
+    const updatePosition = () => {
+      if (!isFixed && yellowDivRef.current) {
+        currentPosition.x += (targetPosition.x - currentPosition.x) * ease;
+        currentPosition.y += (targetPosition.y - currentPosition.y) * ease;
+
+        setPosition({
+          x: currentPosition.x,
+          y: currentPosition.y,
+        });
+
+        rafRef.current = requestAnimationFrame(updatePosition);
+      }
+    };
+
+    const handleMouseMove = (e) => {
+      if (!isFixed && yellowDivRef.current) {
+        targetPosition = {
+          x: e.clientX - yellowDivRef.current.offsetWidth / 2,
+          y: e.clientY - yellowDivRef.current.offsetHeight / 2,
+        };
+
+        if (!rafRef.current) {
+          rafRef.current = requestAnimationFrame(updatePosition);
+        }
+      }
+    };
+
     const handleScroll = () => {
       if (!section1Ref.current || !yellowDivRef.current) return;
 
@@ -112,7 +143,6 @@ const InteractiveScroll = () => {
         window.scrollY /
         (section1Ref.current.offsetHeight - window.innerHeight);
 
-      // 배경색 변경
       if (scrollPercentage >= 0.85 && scrollPercentage <= 1) {
         section1Ref.current.style.backgroundColor = "white";
       } else {
@@ -155,15 +185,6 @@ const InteractiveScroll = () => {
       }
     };
 
-    const handleMouseMove = (e) => {
-      if (!isFixed && yellowDivRef.current) {
-        setPosition({
-          x: e.clientX - yellowDivRef.current.offsetWidth / 2,
-          y: e.clientY - yellowDivRef.current.offsetHeight / 2,
-        });
-      }
-    };
-
     const handleResize = () => {
       setSection1Height();
       handleScroll();
@@ -180,6 +201,9 @@ const InteractiveScroll = () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("mousemove", handleMouseMove);
       window.removeEventListener("resize", handleResize);
+      if (rafRef.current) {
+        cancelAnimationFrame(rafRef.current);
+      }
     };
   }, [isFixed]);
 
@@ -201,6 +225,9 @@ const InteractiveScroll = () => {
       transform: `translate(-50%, -50%) scale(${scale})`,
       left: isFixed ? "50%" : `${position.x}px`,
       top: isFixed ? "50%" : `${position.y}px`,
+      transition: isFixed
+        ? "transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)"
+        : "none",
     };
 
     return style;
