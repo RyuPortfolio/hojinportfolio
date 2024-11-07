@@ -70,7 +70,7 @@ const Portfolio = () => {
             <li>
               <span>JAVA 웹 개발</span>
               <span>(코리아IT아케데미)</span>
-              <span>2024.1 ~ 2024.04</span>
+              <span>2024.11 ~ 2024.04</span>
             </li>
           </ul>
         </section>
