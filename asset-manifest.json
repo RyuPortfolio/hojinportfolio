@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/hojinportfolio/static/css/main.a8c249e6.css",
+    "main.css": "/hojinportfolio/static/css/main.2a875714.css",
     "main.js": "/hojinportfolio/static/js/main.a5945877.js",
     "static/media/ssangyong.png": "/hojinportfolio/static/media/ssangyong.063df46b06fb57ed22fe.png",
     "static/media/contents.png": "/hojinportfolio/static/media/contents.14beea1802c32ce16487.png",
@@ -40,11 +40,11 @@
     "static/media/emblem_01.png": "/hojinportfolio/static/media/emblem_01.15e6a30ba4609bc28f1f.png",
     "static/media/ill.png": "/hojinportfolio/static/media/ill.9cd8aab4ee6ed3128d05.png",
     "index.html": "/hojinportfolio/index.html",
-    "main.a8c249e6.css.map": "/hojinportfolio/static/css/main.a8c249e6.css.map",
+    "main.2a875714.css.map": "/hojinportfolio/static/css/main.2a875714.css.map",
     "main.a5945877.js.map": "/hojinportfolio/static/js/main.a5945877.js.map"
   },
   "entrypoints": [
-    "static/css/main.a8c249e6.css",
+    "static/css/main.2a875714.css",
     "static/js/main.a5945877.js"
   ]
 }
