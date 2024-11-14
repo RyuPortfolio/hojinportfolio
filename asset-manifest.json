@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/hojinportfolio/static/css/main.2a875714.css",
-    "main.js": "/hojinportfolio/static/js/main.ce3e878c.js",
+    "main.css": "/hojinportfolio/static/css/main.c35eb3d6.css",
+    "main.js": "/hojinportfolio/static/js/main.55a9a721.js",
     "static/media/ssangyong.png": "/hojinportfolio/static/media/ssangyong.063df46b06fb57ed22fe.png",
     "static/media/contents.png": "/hojinportfolio/static/media/contents.14beea1802c32ce16487.png",
     "static/media/main.png": "/hojinportfolio/static/media/main.14c89540f3f29b6d5479.png",
@@ -12,39 +12,26 @@
     "static/media/download.png": "/hojinportfolio/static/media/download.6e3da7c6a6625798a619.png",
     "static/media/store.png": "/hojinportfolio/static/media/store.1289ae8e296e0e64a177.png",
     "static/media/shell.png": "/hojinportfolio/static/media/shell.4fdddcbcb683c0da10a4.png",
-    "static/media/pana4.jpg": "/hojinportfolio/static/media/pana4.9a076867045ca67d4409.jpg",
-    "static/media/pana2.jpg": "/hojinportfolio/static/media/pana2.e11e7d4fa07e9713e06b.jpg",
-    "static/media/pana1.jpg": "/hojinportfolio/static/media/pana1.04e985cf38f0dc23f851.jpg",
-    "static/media/pana3.jpg": "/hojinportfolio/static/media/pana3.6f516539660ea3759fe8.jpg",
-    "static/media/neo-product.png": "/hojinportfolio/static/media/neo-product.2546ff812e34cb3d2bd4.png",
     "static/media/mainb.png": "/hojinportfolio/static/media/mainb.8a5d2d526079e7facd0c.png",
     "static/media/mainw.png": "/hojinportfolio/static/media/mainw.35df94593e60eb9b2b93.png",
-    "static/media/panai3.png": "/hojinportfolio/static/media/panai3.6697515c55027f6c3a74.png",
-    "static/media/print.png": "/hojinportfolio/static/media/print.d8168af0ffe793465eba.png",
     "static/media/tagw.png": "/hojinportfolio/static/media/tagw.27a42f374f2149abe037.png",
     "static/media/tagb.png": "/hojinportfolio/static/media/tagb.9d38cc68d24c673313ce.png",
     "static/media/ryu.jpg": "/hojinportfolio/static/media/ryu.6c7047940c510a8ed496.jpg",
     "static/media/sqlb.png": "/hojinportfolio/static/media/sqlb.0ec9d7336dbc9970b847.png",
-    "static/media/panai2.png": "/hojinportfolio/static/media/panai2.1eb4b36caa7657e1a84d.png",
-    "static/media/panai1.png": "/hojinportfolio/static/media/panai1.b0b1b2200b41fb344933.png",
     "static/media/sqlw.png": "/hojinportfolio/static/media/sqlw.6dde9cb579df02d5421f.png",
     "static/media/sheet.png": "/hojinportfolio/static/media/sheet.15f077f1650d36f16b79.png",
     "static/media/edit.png": "/hojinportfolio/static/media/edit.d2f5a6389ec648822c1e.png",
-    "static/media/panai4.png": "/hojinportfolio/static/media/panai4.2d02cfcd20173629fd92.png",
-    "static/media/machinfo1.png": "/hojinportfolio/static/media/machinfo1.9306199f40bb451a02aa.png",
-    "static/media/machinfo2.png": "/hojinportfolio/static/media/machinfo2.148e81ac9ace7b0d4a99.png",
-    "static/media/seo.jpg": "/hojinportfolio/static/media/seo.6e9fd065d3ea19499001.jpg",
     "static/media/SEO.png": "/hojinportfolio/static/media/SEO.4eda299339b47548ff58.png",
     "static/media/hanyang.svg": "/hojinportfolio/static/media/hanyang.54e45e2d6e59fb7ecdf961eafda71798.svg",
     "static/media/html.png": "/hojinportfolio/static/media/html.c77fed674c34630bf6ef.png",
     "static/media/emblem_01.png": "/hojinportfolio/static/media/emblem_01.15e6a30ba4609bc28f1f.png",
     "static/media/ill.png": "/hojinportfolio/static/media/ill.9cd8aab4ee6ed3128d05.png",
     "index.html": "/hojinportfolio/index.html",
-    "main.2a875714.css.map": "/hojinportfolio/static/css/main.2a875714.css.map",
-    "main.ce3e878c.js.map": "/hojinportfolio/static/js/main.ce3e878c.js.map"
+    "main.c35eb3d6.css.map": "/hojinportfolio/static/css/main.c35eb3d6.css.map",
+    "main.55a9a721.js.map": "/hojinportfolio/static/js/main.55a9a721.js.map"
   },
   "entrypoints": [
-    "static/css/main.2a875714.css",
-    "static/js/main.ce3e878c.js"
+    "static/css/main.c35eb3d6.css",
+    "static/js/main.55a9a721.js"
   ]
 }
