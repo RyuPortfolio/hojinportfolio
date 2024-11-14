@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import "./CardGrid.scss";
 import img1 from "./img/vue3.png";
 import img2 from "./img/html.png";
-import img3 from "./img/ill.png";
-import img4 from "./img/SEO.png";
-import img5 from "./img/Youtube_logo.png";
+// import img3 from "./img/ill.png";
+// import img4 from "./img/SEO.png";
+// import img5 from "./img/Youtube_logo.png";
 
 const cardData = [
   {

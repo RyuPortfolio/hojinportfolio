@@ -27,13 +27,12 @@ const Project2 = () => {
     <div className="portfolio-container">
       <Header />
       <header className="portfolio-header">
-        <h1>마크베이스 통합홈페이지</h1>
+        <h1>쌍용자동차 홈페이지 리뉴얼</h1>
         <div className="description">
           <p>
-            Vue3로 구현한 마크베이스 통합 홈페이지 입니다. 기능별 여러 개로
-            운영되던 홈페이지를, UV 향상과 검색엔진 최적화를 위해 하나의
-            홈페이지로 통합했습니다. <br></br>디자인과 백엔드를 제외한 기획,
-            프론트엔드 부분을 담당하였습니다. <br></br>
+            그린컴퓨터 아카데미에서 배운 UI/UX를 기반으로 기획, 디자인
+            퍼블리싱한 페이지입니다.<br></br>html + css 그리고 jquery를 통해
+            구현하였습니다. <br></br>
           </p>
         </div>
       </header>
