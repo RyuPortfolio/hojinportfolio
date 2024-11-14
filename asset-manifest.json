@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/hojinportfolio/static/css/main.c35eb3d6.css",
-    "main.js": "/hojinportfolio/static/js/main.55a9a721.js",
+    "main.js": "/hojinportfolio/static/js/main.4a105ee9.js",
     "static/media/ssangyong.png": "/hojinportfolio/static/media/ssangyong.063df46b06fb57ed22fe.png",
     "static/media/contents.png": "/hojinportfolio/static/media/contents.14beea1802c32ce16487.png",
     "static/media/main.png": "/hojinportfolio/static/media/main.14c89540f3f29b6d5479.png",
@@ -21,17 +21,15 @@
     "static/media/sqlw.png": "/hojinportfolio/static/media/sqlw.6dde9cb579df02d5421f.png",
     "static/media/sheet.png": "/hojinportfolio/static/media/sheet.15f077f1650d36f16b79.png",
     "static/media/edit.png": "/hojinportfolio/static/media/edit.d2f5a6389ec648822c1e.png",
-    "static/media/SEO.png": "/hojinportfolio/static/media/SEO.4eda299339b47548ff58.png",
     "static/media/hanyang.svg": "/hojinportfolio/static/media/hanyang.54e45e2d6e59fb7ecdf961eafda71798.svg",
     "static/media/html.png": "/hojinportfolio/static/media/html.c77fed674c34630bf6ef.png",
     "static/media/emblem_01.png": "/hojinportfolio/static/media/emblem_01.15e6a30ba4609bc28f1f.png",
-    "static/media/ill.png": "/hojinportfolio/static/media/ill.9cd8aab4ee6ed3128d05.png",
     "index.html": "/hojinportfolio/index.html",
     "main.c35eb3d6.css.map": "/hojinportfolio/static/css/main.c35eb3d6.css.map",
-    "main.55a9a721.js.map": "/hojinportfolio/static/js/main.55a9a721.js.map"
+    "main.4a105ee9.js.map": "/hojinportfolio/static/js/main.4a105ee9.js.map"
   },
   "entrypoints": [
     "static/css/main.c35eb3d6.css",
-    "static/js/main.55a9a721.js"
+    "static/js/main.4a105ee9.js"
   ]
 }
