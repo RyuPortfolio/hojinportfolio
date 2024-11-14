@@ -17,17 +17,17 @@ const Header = () => {
         { id: "ssangyoung", title: "ssangyoung", path: "/ssangyoung" },
       ],
     },
-    {
-      id: 4,
-      title: "Design",
-      path: "/design",
-      dropdown: [
-        { id: "coex", title: "coex", path: "/coex" },
-        { id: "others", title: "others", path: "/machdesign" },
-      ],
-    },
-    { id: 5, title: "SEO", path: "/seo" },
-    { id: 6, title: "YouTube", path: "/youtube" },
+    // {
+    //   id: 4,
+    //   title: "Design",
+    //   path: "/design",
+    //   dropdown: [
+    //     { id: "coex", title: "coex", path: "/coex" },
+    //     { id: "others", title: "others", path: "/machdesign" },
+    //   ],
+    // },
+    // { id: 5, title: "SEO", path: "/seo" },
+    // { id: 6, title: "YouTube", path: "/youtube" },
   ];
 
   const handleMouseEnter = (itemId) => {

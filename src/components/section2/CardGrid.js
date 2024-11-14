@@ -22,27 +22,27 @@ const cardData = [
     description: "두 번째 작품 설명",
     path: "/publishing",
   },
-  {
-    id: 3,
-    image: img3,
-    title: "Design",
-    description: "세 번째 작품 설명",
-    path: "/design",
-  },
-  {
-    id: 4,
-    image: img4,
-    title: "SEO",
-    description: "네 번째 작품 설명",
-    path: "/seo",
-  },
-  {
-    id: 5,
-    image: img5,
-    title: "YouTube",
-    description: "다섯 번째 작품 설명",
-    path: "/youtube",
-  },
+  // {
+  //   id: 3,
+  //   image: img3,
+  //   title: "Design",
+  //   description: "세 번째 작품 설명",
+  //   path: "/design",
+  // },
+  // {
+  //   id: 4,
+  //   image: img4,
+  //   title: "SEO",
+  //   description: "네 번째 작품 설명",
+  //   path: "/seo",
+  // },
+  // {
+  //   id: 5,
+  //   image: img5,
+  //   title: "YouTube",
+  //   description: "다섯 번째 작품 설명",
+  //   path: "/youtube",
+  // },
 ];
 
 const CardGrid = () => {
